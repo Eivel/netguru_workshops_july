@@ -1,6 +1,24 @@
 @import "bootstrap";
 @import "compass/css3";
 
+$color-primary-0: #18181B;	// Main Primary color */
+$color-primary-1: #3D4358;
+$color-primary-2: #2F323B;
+$color-primary-3: #1F222B;
+$color-primary-4: #1F263A;
+
+$color-secondary-1-0: #19181B;	// Main Secondary color (1) */
+$color-secondary-1-1: #453E59;
+$color-secondary-1-2: #332F3C;
+$color-secondary-1-3: #231F2C;
+$color-secondary-1-4: #28203B;
+
+$color-secondary-2-0: #151818;	// Main Secondary color (2) */
+$color-secondary-2-1: #354B50;
+$color-secondary-2-2: #293436;
+$color-secondary-2-3: #1B2527;
+$color-secondary-2-4: #1A3135;
+
 #bootstrap-overrides {
   h1, h2, h3, h4, p, span, tr, label, ul{
     color: white;
@@ -55,33 +73,52 @@ input[type] {
   color: rgba(239,239,239,0.9);
   border: 1px solid rgba(130,130,130,0.9);
   &:hover {
-    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
     cursor: pointer;
   }
   &:focus {
     border: 1px solid rgba(227,230,232,0.9);
-    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
     cursor: pointer;
   }
 }
 
-#bootstrap-overrides textarea {
-  @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
-  background-color: rgb(31,31,31);
-  color: rgba(239,239,239,0.9);
-  border: 1px solid rgba(130,130,130,0.9);
-  &:hover {
-    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    cursor: pointer;
+#bootstrap-overrides {
+  textarea {
+    @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+    background-color: rgb(31,31,31);
+    color: rgba(239,239,239,0.9);
+    border: 1px solid rgba(130,130,130,0.9);
+    &:hover {
+      -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      cursor: pointer;
+    }
+    &:focus {
+      border: 1px solid rgba(227,230,232,0.9);
+      -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      cursor: pointer; 
+    }
   }
-  &:focus {
-    border: 1px solid rgba(227,230,232,0.9);
-    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    cursor: pointer; 
+  select {
+    @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+    background-color: rgb(31,31,31);
+    color: rgba(239,239,239,0.9);
+    border: 1px solid rgba(130,130,130,0.9);
+    &:hover {
+      -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      cursor: pointer;
+    }
+    &:focus {
+      border: 1px solid rgba(227,230,232,0.9);
+      -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+      cursor: pointer; 
+    }
   }
 }
 
@@ -112,8 +149,38 @@ input[type] {
     background-color: rgb(31,31,31);
     color: white;
     border: 1px solid rgba(227,230,232,0.9);
-    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
-    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    -webkit-box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(0,0,255,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
     cursor: pointer;
   }
+}
+//panels
+#bootstrap-overrides {
+  .panel {
+    font-family: 'Droid Sans', Georgia, Times, serif;
+    @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+    background-color: rgb(31,31,31);
+    color: white;
+    border: 1px solid rgba(130,130,130,0.9);
+  }
+  .panel-heading {
+    font-family: 'Droid Sans', Georgia, Times, serif;
+    @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+    background-color: $color-primary-4;
+    color: white;
+  }
+  .reviews-panel-heading {
+    font-family: 'Droid Sans', Georgia, Times, serif;
+    @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+    background-color: $color-secondary-2-4;
+    color: white;
+  }
+}
+
+.lowered-button {
+  margin: 5px 0;
+}
+
+.category-index-buttons {
+  margin: 0 5px 0 5px;
 }

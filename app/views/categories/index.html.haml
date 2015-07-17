@@ -1,19 +1,26 @@
-%h1 Listing categories
-
-%table.table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
-
-  - categories.each do |category|
-    %tr
-      %td= category.name
-      %td= link_to 'Show', category
-      %td= link_to 'Edit', edit_category_path(category)
-      %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
-
+.panel.panel-default
+  .panel-heading.categories-panel-heading
+    %h3 Categories
+  .panel-body.categories-panel-body
+    .row
+      .col-md-12.col-sm-12
+        %table.table
+          %thead
+            %tr
+              %th.col-md-8.col-xs-8 Name
+              %th.col-md-4.col-xs-4 Actions
+          %tbody
+            - categories.each do |category|
+              %tr
+                %td= category.name
+                %td
+                  = link_to 'Show', category_path(category), class: 'btn btn-default btn-sm category-index-buttons'
+                  - if current_user && current_user.admin == true
+                    = link_to 'Edit', edit_category_path(category), class: 'btn btn-default btn-sm category-index-buttons'
+                    = link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm category-index-buttons'
 %br
 
-= link_to 'New Category', new_category_path
+- if current_user && current_user.admin == true
+  = link_to 'New Category', new_category_path, class: 'btn btn-default'
+- else
+  = link_to 'Requires admin permissions', root_url, disabled: "disabled", class: 'btn btn-default'

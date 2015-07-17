@@ -1,7 +1,11 @@
-%h1 Editing product
-
-= render 'form'
-
-= link_to 'Show', category_product_path(category, product)
-\|
-= link_to 'Back', category_path(category)
+.col-md-3.col-sm-3
+.col-md-6.col-sm-6
+  .panel.panel-default
+    .panel-heading
+      %h4 Edit product
+    .panel-body
+      = render 'form'
+      = link_to 'Show', category_product_path(category, product), class: 'btn btn-default btn-xs lowered-button'
+      \|
+      = link_to 'Back', category_path(category), class: 'btn btn-default btn-xs lowered-button'
+.col-md-3.col-sm-3

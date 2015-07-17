@@ -1,5 +1,9 @@
-%h1 New category
-
-= render 'form'
-
-= link_to 'Back', categories_path, class: 'btn btn-primary'
+.col-md-3.col-sm-3
+.col-md-6.col-sm-6
+  .panel.panel-default
+    .panel-heading
+      %h4 New category
+    .panel-body
+      = render 'form'
+      = link_to 'Back', categories_path, class: 'btn btn-default btn-xs lowered-button'
+.col-md-3.col-sm-3
