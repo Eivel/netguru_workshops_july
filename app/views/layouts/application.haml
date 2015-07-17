@@ -7,14 +7,23 @@
     = csrf_meta_tags
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application'
+    = google_webfonts_init(google: ['Ubuntu', 'Vollkorn'])
 
-  %body
+  %body#bootstrap-overrides
     %nav.navbar.navbar-default
       .container-fluid
         .navbar-header
-          %span.navbar-brand #{AppConfig.workshops_name}
+          %span.navbar-brand#logo #{AppConfig.workshops_name}
         %p.navbar-text.navbar-right
-          Links should go here
+          - unless current_user.nil?
+            = link_to destroy_user_session_path, method: :delete, class: 'btn btn-default session-buttons' do
+              %i.glyphicon.glyphicon-log-out
+              Log out,
+              = current_user.firstname
+          - else
+            = link_to new_user_session_path, class: 'btn btn-default session-buttons' do
+              %i.glyphicon.glyphicon-log-in
+              Log in
     .container-fluid
       .row
         .col-lg-12

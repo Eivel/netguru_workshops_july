@@ -1,0 +1,119 @@
+@import "bootstrap";
+@import "compass/css3";
+
+#bootstrap-overrides {
+  h1, h2, h3, h4, p, span, tr, label, ul{
+    color: white;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Droid Serif', Georgia, Times, serif;
+  }
+  p, label, tr, ul{
+    font-family: 'Droid Sans', Georgia, Times, serif;
+  }
+}
+
+
+body {
+  background-image: url("website-background.png");
+  background-color: rgb(31,31,31);
+}
+#bootstrap-overrides .navbar {
+  border: 0px;
+}
+.navbar {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+}
+.text-white, navbar-header {
+  color: rgba(255,255,255,0.9);
+  border: 1px solid rgba(130,130,130,0.9);
+}
+.session-buttons {
+  font-family: 'Droid Sans', Georgia, Times, serif;
+  display: inline-block;
+  @include box-sizing(content-box);
+  cursor: pointer;
+  width: 150px;
+  padding: 10px 20px;
+  margin-bottom: 2px;
+  border: 1px solid rgba(130,130,130,0.9);
+  @include border-radius(3px);
+  font: normal 16px/normal "Amarante", Helvetica, sans-serif;
+  color: rgba(239,239,239,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  @include background(rgb(31,31,31));
+  @include box-shadow(2px 2px 2px 0 rgba(0,0,0,0.2) );
+  @include text-shadow(-1px -1px 0 rgba(15,73,168,0.66) );
+  @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+}
+
+
+input[type] {
+  @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+  background-color: rgb(31,31,31);
+  color: rgba(239,239,239,0.9);
+  border: 1px solid rgba(130,130,130,0.9);
+  &:hover {
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    cursor: pointer;
+  }
+  &:focus {
+    border: 1px solid rgba(227,230,232,0.9);
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    cursor: pointer;
+  }
+}
+
+#bootstrap-overrides textarea {
+  @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+  background-color: rgb(31,31,31);
+  color: rgba(239,239,239,0.9);
+  border: 1px solid rgba(130,130,130,0.9);
+  &:hover {
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    cursor: pointer;
+  }
+  &:focus {
+    border: 1px solid rgba(227,230,232,0.9);
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    cursor: pointer; 
+  }
+}
+
+
+#bootstrap-overrides #logo {
+  font-family: 'Droid Serif', Georgia, Times, serif;
+  border: 0px;
+  font-size: 1.7em;
+  color: white;
+  //text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 10px 0px auto 0px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+#bootstrap-overrides .btn-default {
+  font-family: 'Droid Sans', Georgia, Times, serif;
+  @include transition(all 150ms cubic-bezier(0.42, 0, 0.58, 1));
+  background-color: rgb(31,31,31);
+  color: rgba(239,239,239,0.9);
+  border: 1px solid rgba(130,130,130,0.9);
+  &:hover {
+    background-color: rgb(31,31,31);
+    color: white;
+    border: 1px solid rgba(227,230,232,0.9);
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 6px 2px rgba(255,0,0,0.5) , 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+    cursor: pointer;
+  }
+}

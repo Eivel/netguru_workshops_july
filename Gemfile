@@ -19,7 +19,10 @@ gem 'therubyracer', platforms: :ruby
 gem 'travis'
 gem 'ffaker'
 gem 'konf'
-
+gem "compass-rails", github: "Compass/compass-rails", branch: "master"
+gem "js-routes"
+gem "animate-rails"
+gem 'google-webfonts-rails'
 group :development do
   gem 'spring'
 end
