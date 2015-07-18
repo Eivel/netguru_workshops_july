@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     before_action :authenticate_user!
     expose(:user)
-    expose(:reviews) { current_user.reviews }
+    expose(:reviews) { current_user.reviews.last(5) }
     
     def show
         
