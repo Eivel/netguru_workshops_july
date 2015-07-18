@@ -26,6 +26,8 @@ gem 'google-webfonts-rails'
 
 gem "paperclip", "~> 4.2"
 gem "paperclip-dropbox", ">= 1.1.7"
+
+gem 'rails_12factor', group: :production
 group :development do
   gem 'spring'
 end
