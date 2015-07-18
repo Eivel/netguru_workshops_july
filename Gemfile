@@ -23,6 +23,9 @@ gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 gem "js-routes"
 gem "animate-rails"
 gem 'google-webfonts-rails'
+
+gem "paperclip", "~> 4.2"
+gem "paperclip-dropbox", ">= 1.1.7"
 group :development do
   gem 'spring'
 end

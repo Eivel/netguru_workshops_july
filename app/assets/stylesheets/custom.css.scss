@@ -193,11 +193,18 @@ input[type] {
   display: inline;
 }
 
-#new_user > div.password-recovery-buttons > a:nth-child(3) {
+#new_user > div.password-recovery-buttons > a:nth-child(3),
+#bootstrap-overrides > div.container-fluid > div > div > div.col-md-6.col-sm-6 > div > div.panel-body > div:nth-child(1) > div:nth-child(1) > div.row > div > form {
   margin-top: 10px;
 }
 
 #new_user > div.password-recovery-buttons > a:nth-child(1),
 #new_user > div.form-actions > a.btn.btn-default.btn-xs {
   margin-left: 10px;
+}
+
+.profile-border {
+  display: block;
+  border-top: 1px solid rgba(227,230,232,0.9);
+  margin: 10px 0 10px 0;
 }
