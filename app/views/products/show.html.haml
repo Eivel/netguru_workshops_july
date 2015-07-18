@@ -31,6 +31,14 @@
         %h4 New Review
       .panel-body
         = render 'reviews/form'
+    .category-show-back-buttons
+      = link_to edit_category_product_path(category.id, product.id), class: 'btn btn-default btn-xs' do
+        %i.glyphicon.glyphicon-pencil
+        Edit
+      \|
+      = link_to category_products_path, class: 'btn btn-default btn-xs' do
+        %i.glyphicon.glyphicon-backward
+        Back
 
   .col-md-6
     .panel.panel-success
@@ -38,8 +46,3 @@
         %h4 Reviews
       .panel-body
         = render reviews
-
-
-= link_to 'Edit', edit_category_product_path(category.id, product.id), class: 'btn btn-default btn-xs'
-\|
-= link_to 'Back', category_products_path, class: 'btn btn-default btn-xs'

@@ -1,12 +1,33 @@
-%h2 Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-    = f.input :firstname, required: true
-    = f.input :lastname, required: true
-    = f.input :password, required: true
-    = f.input :password_confirmation, required: true
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "devise/shared/links"
+.col-md-3
+.col-md-6
+  .panel.panel-default
+    .panel-heading
+      %h3 Sign up
+    .panel-body
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        - if resource.errors.any?
+          #error_explanation
+            %h4= "#{pluralize(resource.errors.count, "error")} prohibited this resource from being saved:"
+            %ul
+              - resource.errors.full_messages.each do |msg|
+                %li= msg
+        .form-group
+          = f.label :email
+          = f.email_field :email, required: true, :autofocus => true, :pattern => ".*", placeholder: 'example@domain.com', class: 'form-control'
+        .form-group
+          = f.label :firstname
+          = f.text_field :firstname, required: true, class: 'form-control'
+        .form-group
+          = f.label :lastname
+          = f.text_field :lastname, required: true, class: 'form-control'
+        .form-group
+          = f.label :password
+          = f.password_field :password, required: true, placeholder: 'Minimum length: 8', class: 'form-control'
+        .form-group
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation, required: true,placeholder: 'Minimum length: 8', class: 'form-control'
+  
+        .form-actions
+          = f.submit 'Sign-up', class: 'btn btn-default btn-sm'
+          = render "devise/shared/links"
+.col-md-3

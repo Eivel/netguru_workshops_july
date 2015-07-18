@@ -14,13 +14,21 @@
               %tr
                 %td= category.name
                 %td
-                  = link_to 'Show', category_path(category), class: 'btn btn-default btn-sm category-index-buttons'
+                  = link_to category_path(category), class: 'btn btn-default btn-sm index-buttons' do
+                    %i.glyphicon.glyphicon-list-alt
+                    Show
                   - if current_user && current_user.admin == true
-                    = link_to 'Edit', edit_category_path(category), class: 'btn btn-default btn-sm category-index-buttons'
-                    = link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm category-index-buttons'
+                    = link_to edit_category_path(category), class: 'btn btn-default btn-sm index-buttons'do
+                      %i.glyphicon.glyphicon-pencil
+                      Edit
+                    = link_to category, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm index-buttons' do
+                      %i.glyphicon.glyphicon-trash
+                      Destroy
 %br
 
 - if current_user && current_user.admin == true
-  = link_to 'New Category', new_category_path, class: 'btn btn-default'
+  = link_to new_category_path, class: 'btn btn-default' do
+    %i.glyphicon.glyphicon-plus
+    New Category
 - else
-  = link_to 'Requires admin permissions', root_url, disabled: "disabled", class: 'btn btn-default'
+  = link_to 'Admin permissions required', root_url, disabled: "disabled", class: 'btn btn-default'

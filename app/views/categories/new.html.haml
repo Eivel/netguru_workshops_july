@@ -5,5 +5,7 @@
       %h4 New category
     .panel-body
       = render 'form'
-      = link_to 'Back', categories_path, class: 'btn btn-default btn-xs lowered-button'
+      = link_to categories_path, class: 'btn btn-default btn-xs lowered-button' do
+        %i.glyphicon.glyphicon-backward
+        Back
 .col-md-3.col-sm-3

@@ -178,9 +178,26 @@ input[type] {
 }
 
 .lowered-button {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
-.category-index-buttons {
+.index-buttons {
   margin: 0 5px 0 5px;
+}
+
+.category-show-back-buttons {
+  margin: 10px 0 10px 0;
+}
+
+.password-recovery-buttons {
+  display: inline;
+}
+
+#new_user > div.password-recovery-buttons > a:nth-child(3) {
+  margin-top: 10px;
+}
+
+#new_user > div.password-recovery-buttons > a:nth-child(1),
+#new_user > div.form-actions > a.btn.btn-default.btn-xs {
+  margin-left: 10px;
 }

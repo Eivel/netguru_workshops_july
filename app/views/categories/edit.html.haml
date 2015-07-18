@@ -5,7 +5,12 @@
       %h4 Edit category
     .panel-body
       = render 'form'
-      = link_to 'Show', category, class: 'btn btn-default btn-xs lowered-button'
-      \|
-      = link_to 'Back', categories_path, class: 'btn btn-default btn-xs lowered-button'
+      .lowered-button
+        = link_to category, class: 'btn btn-default btn-xs' do
+          %i.glyphicon.glyphicon-list-alt
+          Show
+        \|
+        = link_to categories_path, class: 'btn btn-default btn-xs' do
+          %i.glyphicon.glyphicon-backward
+          Back
 .col-md-3.col-sm-3
