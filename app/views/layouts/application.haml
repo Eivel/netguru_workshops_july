@@ -15,10 +15,10 @@
         .navbar-header
           %span.navbar-brand#logo #{AppConfig.workshops_name}
         %p.navbar-text.navbar-right
-          = link_to user_profile_path, class: 'btn btn-default' do
-            %i.glyphicon.glyphicon-user
-            Profile
           - unless current_user.nil?
+            = link_to user_profile_path, class: 'btn btn-default' do
+              %i.glyphicon.glyphicon-user
+              Profile
             = link_to destroy_user_session_path, method: :delete, class: 'btn btn-default session-buttons' do
               %i.glyphicon.glyphicon-log-out
               Log out,
