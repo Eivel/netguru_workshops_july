@@ -32,5 +32,6 @@
             %h4= r.product.title
             %p= r.content
             %p Ocena: #{r.rating}
+            %p Created at: #{r.created_at.strftime("%d/%m/%Y")}
             .review-border
 .col-md-3.col-sm-3
