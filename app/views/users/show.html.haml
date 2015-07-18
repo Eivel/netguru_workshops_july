@@ -22,14 +22,15 @@
           %p= "Email: " + current_user.email
       .row
         .profile-border
-        .col-md-3.col-sm-3
-          %h4 Reviews
+      .row
+        .col-md-12
+          %h3.text-center.profile-review-title Reviews
+          
       .row
         - reviews.each do |r|
           .col-md-12.col-sm-12
-            .panel.panel-default
-              .panel-heading.reviews-panel-heading
-                %h4= r.rating
-              .panel-body
-                %p= r.content
+            %h4= r.product.title
+            %p= r.content
+            %p Ocena: #{r.rating}
+            .review-border
 .col-md-3.col-sm-3

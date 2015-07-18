@@ -193,8 +193,26 @@ input[type] {
   display: inline;
 }
 
+.profile-review-title {
+  display: block;
+  border-bottom: 1px solid rgba(227,230,232,0.9);
+}
+
+.profile-border {
+  display: block;
+  border-top: 1px solid rgba(227,230,232,0.9);
+  margin: 10px 0 10px 0;
+}
+
+.review-border {
+  display: block;
+  border-bottom: 1px solid rgba(227,230,232,0.9);
+  margin: 10px 0 10px 0;
+}
+
 #new_user > div.password-recovery-buttons > a:nth-child(3),
-#bootstrap-overrides > div.container-fluid > div > div > div.col-md-6.col-sm-6 > div > div.panel-body > div:nth-child(1) > div:nth-child(1) > div.row > div > form {
+#bootstrap-overrides > div.container-fluid > div > div > div.col-md-6.col-sm-6 > div > div.panel-body > div:nth-child(1) > div:nth-child(1) > div.row > div > form,
+#bootstrap-overrides > div > div > div > div.col-md-6.col-sm-6 > div > div.panel-body > div:nth-child(1) > div:nth-child(1) > div.row > div > form > button {
   margin-top: 10px;
 }
 
@@ -203,8 +221,3 @@ input[type] {
   margin-left: 10px;
 }
 
-.profile-border {
-  display: block;
-  border-top: 1px solid rgba(227,230,232,0.9);
-  margin: 10px 0 10px 0;
-}
