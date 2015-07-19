@@ -38,6 +38,7 @@ body {
 }
 #bootstrap-overrides .navbar {
   border: 0px;
+  background-color: $color-secondary-2-2;
 }
 .navbar {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
